@@ -36,13 +36,17 @@ for (let i = 0; i<colors.length; i++){
 
 // STEP 3: Create an empty array called "numbers" using let.
 //         let numbers = [];
-
+let numbers = [];
 // STEP 4: Use a for loop that runs 5 times (i = 0 to 4).
 //         Inside the loop:
 //         a) Use prompt() to ask "Enter number " + (i + 1)
 //         b) Use parseFloat() to convert the input to a number
 //         c) Use .push() to add the number to the array
-
+for (let i = 0; i < 5; i++){
+    let input = prompt("Enter number" + (i + 1));
+    let num = parseFloat(input);
+    numbers.push(num);
+}
 // STEP 5: Print all the numbers on one line.
 //         Build a string by looping through the array.
 //         Separate each number with ", " (comma and space).
@@ -52,7 +56,14 @@ for (let i = 0; i<colors.length; i++){
 //         HINT: Start with an empty string. In the loop,
 //         add the number. If it's not the last number,
 //         also add ", " after it.
-
+let numbersString = "";
+for (let i = 0; i < numbers.length; i++){
+    numbersString += numbers[i];
+    if (i < numbers.length - 1){
+        numbersString += ", ";
+    }
+}
+console.log("Numbers: " + numbersString);
 // STEP 6: Calculate the sum of all numbers.
 //         Use a for loop to add each number to a running total.
 //         Print: console.log("Sum: " + sum)
